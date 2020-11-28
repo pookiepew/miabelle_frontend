@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import authReducer from './auth';
-import songsReducer from './songs';
-import streamerReducer from './streamer';
+import auth from './auth';
+import songs from './songs';
+import streamer from './streamer';
 
 export default combineReducers({
-  authReducer,
-  songsReducer,
-  streamerReducer
+  auth,
+  songs,
+  streamer
 });

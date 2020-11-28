@@ -5,7 +5,7 @@ const initialState = {
   loading: true
 };
 
-const songsReducer = (state = initialState, action) => {
+const songs = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -20,4 +20,4 @@ const songsReducer = (state = initialState, action) => {
   }
 };
 
-export default songsReducer;
+export default songs;

@@ -7,7 +7,7 @@ const initialState = {
   user: null
 };
 
-const authReducer = (state = initialState, action) => {
+const auth = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -38,4 +38,4 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
-export default authReducer;
+export default auth;

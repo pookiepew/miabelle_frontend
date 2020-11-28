@@ -18,7 +18,7 @@ const initialState = {
   loading: true
 };
 
-const streamerReducer = (state = initialState, action) => {
+const streamer = (state = initialState, action) => {
   const { type, payload, streamer } = action;
 
   switch (type) {
@@ -41,4 +41,4 @@ const streamerReducer = (state = initialState, action) => {
   }
 };
 
-export default streamerReducer;
+export default streamer;
