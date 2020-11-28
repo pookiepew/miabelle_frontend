@@ -1,7 +1,27 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import SongList from './Song/pages/SongList';
+
 import './App.css';
 
 const App = () => {
-  return <h1>Working</h1>;
+  console.log('[APP] render');
+
+  let routes;
+
+  routes = (
+    <Switch>
+      <Route path='/song/list' exact>
+        <SongList />
+      </Route>
+    </Switch>
+  );
+
+  return (
+    <Router>
+      <main>{routes}</main>
+    </Router>
+  );
 };
 
 export default App;
