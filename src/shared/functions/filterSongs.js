@@ -69,6 +69,14 @@ const songsFilter = (songs, filterFromComponent) => {
     filteredSongs = findTextMatches(filteredSongs, newFilter.text);
   }
 
+  if (
+    !newFilter.game &&
+    !newFilter.mode &&
+    !newFilter.routine &&
+    !newFilter.text
+  )
+    filteredSongs = [];
+
   return { songs: filteredSongs, filter: newFilter };
 };
 

@@ -18,13 +18,13 @@ const SongList = ({ dispatch, songs }) => {
     dispatch(getAllSongs());
   }, [dispatch]);
 
-  let songsToFilter;
+  let songToFilter;
 
   if (!songs.loading) {
     if (songs.filtered.length === 0) {
-      songsToFilter = songs.all;
+      songToFilter = songs.all;
     } else {
-      songsToFilter = songs.filtered;
+      songToFilter = songs.filtered;
     }
   }
 
@@ -36,9 +36,9 @@ const SongList = ({ dispatch, songs }) => {
   return (
     <section>
       {!songs.loading && (
-        <Filter songs={songsToFilter} filterHandler={filterHandler} />
+        <Filter songs={songToFilter} filterHandler={filterHandler} />
       )}
-      {songs.loading ? <Spinner /> : <ShowList songs={songs.all} />}
+      {songs.loading ? <Spinner /> : <ShowList songs={songs.filtered} />}
     </section>
   );
 };

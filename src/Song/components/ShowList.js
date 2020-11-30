@@ -1,10 +1,14 @@
+import Song from './Song';
+
 const ShowList = props => {
   console.log('[ShowList] render');
 
   return (
-    <section>
-      <h1>List of songs...</h1>
-    </section>
+    <ul>
+      {props.songs.map(song => (
+        <Song key={song._id} song={song} />
+      ))}
+    </ul>
   );
 };
 

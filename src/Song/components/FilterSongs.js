@@ -28,7 +28,7 @@ const Filter = props => {
         <option value='default' disabled>
           -- Please select one --
         </option>
-        <option value='all_games'>View All</option>
+        <option value='all_games'>Clear Filter</option>
         {games.sort().map(game => (
           <option value={game} key={game}>
             {game}
@@ -39,7 +39,7 @@ const Filter = props => {
         <option value='default' disabled>
           -- Please select one --
         </option>
-        <option value='all_modes'>View All</option>
+        <option value='all_modes'>Clear Filter</option>
         {modes.sort().map(mode => (
           <option value={mode} key={mode}>
             {mode}
@@ -53,7 +53,7 @@ const Filter = props => {
         <option value='default' disabled>
           -- Please select one --
         </option>
-        <option value='all_routines'>View All</option>
+        <option value='all_routines'>Clear Filter</option>
         {routines.sort().map(routine => (
           <option value={routine} key={routine}>
             {routine}
