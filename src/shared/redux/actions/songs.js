@@ -1,6 +1,6 @@
-import api from '../utils/api';
+import api from '../../util/api';
 
-import { GET_ALL_SONGS } from './types';
+import { GET_ALL_SONGS, FILTER_SONGS } from './types';
 
 export const getAllSongs = () => async dispatch => {
   try {
@@ -13,4 +13,12 @@ export const getAllSongs = () => async dispatch => {
   } catch (err) {
     console.log(err);
   }
+};
+
+export const filterSongs = (songs, filter) => async dispatch => {
+  dispatch({
+    type: FILTER_SONGS,
+    songs,
+    filter
+  });
 };
