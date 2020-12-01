@@ -6,7 +6,9 @@ const ShowList = props => {
   return (
     <ul>
       {props.songs.map(song => (
-        <Song key={song._id} song={song} />
+        <li key={song._id}>
+          <Song song={song} />
+        </li>
       ))}
     </ul>
   );
