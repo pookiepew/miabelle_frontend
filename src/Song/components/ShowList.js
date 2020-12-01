@@ -8,15 +8,15 @@ const ShowList = props => {
   console.log('[ShowList] render');
 
   return (
-    <ul>
-      {props.songs.map(song => (
-        <li key={song._id}>
-          <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Spinner />}>
+      <ul>
+        {props.songs.map(song => (
+          <li key={song._id}>
             <Song song={song} />
-          </Suspense>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </Suspense>
   );
 };
 
