@@ -1,0 +1,28 @@
+Design/Theme:
+  - Candyfloss bubblegum pink cute
+
+Pages:
+  - /song/list
+  - /song/request
+  - /commands
+  - /account
+
+Guests:
+  - Able to view the homepage and certain links
+  - Able to view /song/list - a complete collection of songs in various game versions and Unlimited
+  - Able to view /song/request but the request button will be a login button. 
+  - Able to view /commands but the button will be a login button.
+
+Logged in:
+  - Everything Guest +
+  - Request songs
+  - Run commands (bot, lights)
+  - View and alter(?) their account settings
+
+Websockets:
+  - Used for:
+    - Requesting songs
+    - Activate songs (streamer,mod)
+    - Deactivate songs (streamer,mod)
+    - Running commands (bot,lights)
+    - Updating UI on all clients
