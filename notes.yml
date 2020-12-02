@@ -1,0 +1,15 @@
+/song/request:
+  -
+
+/song/list/:
+  SongList:
+    - A form which filter songs before rendering
+    - The list of songs:
+        - Song
+
+Form to filter songs:
+  Filter:
+    - Game: Select
+    - Mode: Select
+    - Routine: Select
+    - Artist or title: Input

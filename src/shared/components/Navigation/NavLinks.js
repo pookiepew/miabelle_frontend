@@ -5,7 +5,7 @@ const NavLinks = props => {
   return (
     <ul>
       <li>
-        <NavLink to='/song/list'>Song List</NavLink>
+        <NavLink to='/song/list'>Songlist</NavLink>
       </li>
     </ul>
   );
