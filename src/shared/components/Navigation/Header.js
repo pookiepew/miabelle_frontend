@@ -25,7 +25,12 @@ const Header = props => {
   return (
     <header>
       {sidebarIsOpen && <Backdrop onClick={sidebarToggleHandler} />}
-      <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler} />
+      <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler}>
+        <h1>
+          <Link to='/'>Miabelle.tv</Link>
+        </h1>
+        <NavLinks />
+      </Sidebar>
       <h1>
         <Link to='/'>Miabelle.tv</Link>
       </h1>
