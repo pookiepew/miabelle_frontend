@@ -1,7 +1,80 @@
 .card {
-  height: 360px;
+  height: 340px;
   width: 650px;
+  padding: 10px;
   background: #fcaccf;
   border: 1px solid rgba(254, 120, 177, 0.4);
+  border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card__header {
+  height: 112px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card__image {
+  margin-right: 2rem;
+}
+
+.card__title {
+  display: inline-block;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+
+.card__body {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.card__body-text {
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.card__body-socials {
+  display: flex;
+  width: 100%;
+}
+
+.card__body-list {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.card__body-listitem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card__body-icon {
+  height: 35px;
+  margin-right: 1.5rem;
+}
+
+.big-text {
+  font-size: 2.2rem;
+}
+
+h2.big-text {
+  margin-bottom: 1rem;
+}
+
+p.big-text {
+  font-size: 1.9rem;
+}
+
+.card__body-listitem:hover {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: underline;
 }

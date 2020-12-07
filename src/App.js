@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './shared/components/Navigation/Header';
+import Home from './Home/Home';
 import SongList from './Song/pages/SongList';
 
 const App = () => {
@@ -10,6 +11,9 @@ const App = () => {
 
   routes = (
     <Switch>
+      <Route path='/' exact>
+        <Home />
+      </Route>
       <Route path='/song/list' exact>
         <SongList />
       </Route>
