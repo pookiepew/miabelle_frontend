@@ -9,9 +9,9 @@ const NavLinks = props => {
       <li className='navlinks__link'>
         <NavLink to='/song/list'>Songlist</NavLink>
       </li>
-      <li className='navlinks__link'>
+      {/* <li className='navlinks__link'>
         <NavLink to='/login'>Login</NavLink>
-      </li>
+      </li> */}
     </ul>
   );
 };

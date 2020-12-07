@@ -34,7 +34,7 @@ const SongList = ({ dispatch, songs }) => {
   };
 
   return (
-    <section>
+    <section className='songlist'>
       <h1>Please select a filter to list songs</h1>
       {!songs.loading && (
         <Filter songs={songToFilter} filterHandler={filterHandler} />

@@ -42,12 +42,17 @@
 .card__body-socials {
   display: flex;
   width: 100%;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 80px;
 }
 
 .card__body-list {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  justify-content: space-between;
 }
 
 .card__body-listitem {
@@ -57,7 +62,7 @@
 }
 
 .card__body-icon {
-  height: 35px;
+  height: 40px;
   margin-right: 1.5rem;
 }
 
@@ -70,11 +75,17 @@ h2.big-text {
 }
 
 p.big-text {
-  font-size: 1.9rem;
+  font-size: 2rem;
 }
 
 .card__body-listitem:hover {
   cursor: pointer;
   color: #fff;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1300px) {
+  .card {
+    margin-top: 2.5rem;
+  }
 }
