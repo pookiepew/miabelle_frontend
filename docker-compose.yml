@@ -1,9 +1,11 @@
 version: '3.8'
 services:
-  frontend:
+  miabelle:
     build: .
     ports:
       - '3000:3000'
+    networks:
+      - justdance
     env_file:
       - ./env/react.env
     volumes:
@@ -12,3 +14,7 @@ services:
       - /app/node_modules
     stdin_open: true
     tty: true
+
+networks:
+  justdance:
+    external: true

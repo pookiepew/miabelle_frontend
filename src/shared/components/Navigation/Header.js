@@ -7,6 +7,8 @@ import Backdrop from '../../UIElements/Backdrop';
 import NavLinks from './NavLinks';
 import Hamburger from '../../UIElements/Hamburger';
 
+import './css/Header.css';
+
 const Header = props => {
   console.log('[Header] render');
 
@@ -23,18 +25,18 @@ const Header = props => {
   };
 
   return (
-    <header>
+    <header className='main-header'>
       {sidebarIsOpen && <Backdrop onClick={sidebarToggleHandler} />}
       <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler}>
-        <h1>
+        <h1 className='main-header__title'>
           <Link to='/'>Miabelle.tv</Link>
         </h1>
         <NavLinks />
       </Sidebar>
-      <h1>
+      <h1 className='main-header__title'>
         <Link to='/'>Miabelle.tv</Link>
       </h1>
-      <nav>
+      <nav className='main-nav'>
         <NavLinks />
       </nav>
       <Hamburger classes={classes} click={sidebarToggleHandler} />

@@ -1,0 +1,14 @@
+.navlinks {
+  display: flex;
+}
+
+.navlinks__link a {
+  font-size: 2.2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.navlinks__link a:hover {
+  cursor: pointer;
+  text-decoration: underline 2px;
+}

@@ -1,1 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+:root {
+  --primary-color: #fcb2d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: 'Indie Flower', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.active {
+  text-decoration: underline 2px;
+}

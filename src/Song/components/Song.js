@@ -10,7 +10,7 @@ const Song = ({ song }) => {
     <div>
       <Suspense fallback={<Spinner />}>
         <Image
-          src={'https://images.miabelle.tv/images/small/' + song.imageName}
+          src={'https://images.miabelle.tv/small/' + song.imageName}
           alt={song.title}
         />
       </Suspense>
