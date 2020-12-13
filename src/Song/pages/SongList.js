@@ -40,7 +40,15 @@ const SongList = ({ dispatch, songs }) => {
       {!songs.loading && (
         <Filter songs={songToFilter} filterHandler={filterHandler} />
       )}
-      {songs.loading ? <Spinner /> : <ShowList songs={songs.filtered} />}
+
+      {songs.loading ? (
+        <div className='songlist__spinner'>
+          <Spinner />
+          <h2>Fetching some data</h2>
+        </div>
+      ) : (
+        <ShowList songs={songs.filtered} />
+      )}
     </section>
   );
 };
