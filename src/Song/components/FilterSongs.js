@@ -1,5 +1,7 @@
 import checkInputValue from '../../shared/functions/checkInputVal';
 
+import './css/FilterSongs.css';
+
 const Filter = props => {
   console.log('[FilterSongs] render');
 
@@ -23,10 +25,16 @@ const Filter = props => {
   };
 
   return (
-    <form>
+    <form className='filter-songs'>
+      <input
+        className='text-search2'
+        type='text'
+        placeholder='Search for Title or Artist'
+        onChange={e => onChangeHandler(e, 'text')}
+      />
       <select onChange={e => onChangeHandler(e, 'game')} defaultValue='default'>
         <option value='default' disabled>
-          -- Please select one --
+          -- Filter by game --
         </option>
         <option value='all_games'>Clear Filter</option>
         {games.sort().map(game => (
@@ -37,7 +45,7 @@ const Filter = props => {
       </select>
       <select onChange={e => onChangeHandler(e, 'mode')} defaultValue='default'>
         <option value='default' disabled>
-          -- Please select one --
+          -- Filter by mode --
         </option>
         <option value='all_modes'>Clear Filter</option>
         {modes.sort().map(mode => (
@@ -51,7 +59,7 @@ const Filter = props => {
         defaultValue='default'
       >
         <option value='default' disabled>
-          -- Please select one --
+          -- Filter by routines --
         </option>
         <option value='all_routines'>Clear Filter</option>
         {routines.sort().map(routine => (
@@ -60,7 +68,12 @@ const Filter = props => {
           </option>
         ))}
       </select>
-      <input type='text' onChange={e => onChangeHandler(e, 'text')} />
+      <input
+        className='text-search'
+        type='text'
+        placeholder='Search for Title or Artist'
+        onChange={e => onChangeHandler(e, 'text')}
+      />
     </form>
   );
 };

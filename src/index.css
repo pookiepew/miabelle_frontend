@@ -31,3 +31,7 @@ ul {
 .active {
   text-decoration: underline 2px;
 }
+
+.infinite-scroll-component__outerdiv {
+  padding-top: 100px;
+}

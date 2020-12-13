@@ -44,7 +44,7 @@ const SongList = ({ dispatch, songs }) => {
       {songs.loading ? (
         <div className='songlist__spinner'>
           <Spinner />
-          <h2>Fetching some data</h2>
+          <h2>Fetching Songs</h2>
         </div>
       ) : (
         <ShowList songs={songs.filtered} />
