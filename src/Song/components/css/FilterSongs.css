@@ -1,10 +1,11 @@
 .filter-songs {
   position: fixed;
-  top: 120px;
+  top: 100px;
   left: 0;
   width: 100%;
   background: var(--primary-color);
   padding: 0 200px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -45,7 +46,6 @@
 
 @media screen and (max-width: 1460px) {
   .filter-songs {
-    padding: 0 60px;
     flex-wrap: wrap;
   }
   .text-search {
@@ -66,10 +66,14 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
   .filter-songs {
-    top: 100px;
+    top: 80px;
+    padding: 0 60px;
   }
+}
+
+@media screen and (max-width: 1024px) {
   .filter-songs input {
     margin-bottom: 0;
     line-height: 0.5rem;
@@ -84,6 +88,20 @@
 }
 
 @media screen and (width: 1024px) and (orientation: landscape) {
+  .filter-songs {
+    position: absolute;
+    top: 80px;
+  }
+  .filter-songs {
+    padding: 0 1rem;
+  }
+  .filter-songs input,
+  .filter-songs select {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
   .filter-songs {
     position: absolute;
     top: 80px;

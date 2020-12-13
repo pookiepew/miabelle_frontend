@@ -4,6 +4,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import Song from './Song';
 
+import './css/ShowList.css';
+
 const ShowList = ({ songs }) => {
   console.log('[ShowList] render');
 
@@ -30,9 +32,9 @@ const ShowList = ({ songs }) => {
       loader={<h4>Loading...</h4>}
       hasChildren={true}
     >
-      <ul>
+      <ul className='song-list'>
         {filteredSongs.map(song => (
-          <li key={song._id}>
+          <li className='song-list__item' key={song._id}>
             <Song song={song} />
           </li>
         ))}
