@@ -11,7 +11,7 @@
   border: 0;
   margin: 0;
   overflow: visible;
-  z-index: 200;
+  z-index: 99999;
   margin-top: 10px;
 }
 
@@ -103,7 +103,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .hamburger {
     display: none;
   }

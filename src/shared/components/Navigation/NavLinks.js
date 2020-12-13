@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import './css/NavLinks.css';
 
-const NavLinks = props => {
+const NavLinks = () => {
   console.log('[NavLinks] render');
   return (
     <ul className='navlinks'>
