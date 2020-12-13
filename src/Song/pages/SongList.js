@@ -10,6 +10,8 @@ import Filter from '../components/FilterSongs';
 import Spinner from '../../shared/UIElements/Spinner';
 import ShowList from '../components/ShowList';
 
+import './css/SongList.css';
+
 const SongList = ({ dispatch, songs }) => {
   console.log('[SongList] render');
 

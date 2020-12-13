@@ -1,22 +1,42 @@
-import React, { Suspense } from 'react';
+import { useEffect, useState } from 'react';
 
-import Spinner from '../../shared/UIElements/Spinner';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
-const Song = React.lazy(() => import('./Song'));
+import Song from './Song';
 
-const ShowList = props => {
+const ShowList = ({ songs }) => {
   console.log('[ShowList] render');
 
+  let moreSongsToLoad = true;
+
+  const [filteredSongs, setFilteredSongs] = useState([]);
+
+  const loadMoreSongs = amount => {
+    setFilteredSongs(songs.slice(0, filteredSongs.length + amount));
+  };
+
+  useEffect(() => {
+    if (songs.length > 0) setFilteredSongs(songs.slice(0, 20));
+  }, [songs]);
+
+  if (songs.length === filteredSongs.length) moreSongsToLoad = false;
+
   return (
-    <Suspense fallback={<Spinner />}>
+    <InfiniteScroll
+      dataLength={filteredSongs.length}
+      next={() => loadMoreSongs(20)}
+      hasMore={moreSongsToLoad}
+      loader={<h4>Loading...</h4>}
+      hasChildren={true}
+    >
       <ul>
-        {props.songs.map(song => (
+        {filteredSongs.map(song => (
           <li key={song._id}>
             <Song song={song} />
           </li>
         ))}
       </ul>
-    </Suspense>
+    </InfiniteScroll>
   );
 };
 
