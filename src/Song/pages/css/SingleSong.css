@@ -1,0 +1,64 @@
+.single-song__info {
+  width: 100%;
+  padding: 100px 200px;
+  display: flex;
+  color: #fff;
+}
+
+.single-song__info img {
+  height: 400px;
+  border-radius: 5px;
+  border: 3px solid rgba(254, 120, 177, 1);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  margin-right: 50px;
+}
+
+.single-song__title {
+  font-size: 2.5rem;
+}
+
+.single-song__artist {
+  font-size: 2rem;
+}
+
+.single-song__mode {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.single-song__routine {
+  font-size: 1.5rem;
+}
+
+.single-song__game {
+  font-size: 1.5rem;
+}
+
+.single-song__difficulty {
+  font-size: 1.5rem;
+}
+
+.single-song__effort {
+  font-size: 1.5rem;
+}
+
+.single-song__video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .single-song__info {
+    padding: 100px 60px;
+  }
+  .single-song__title {
+    font-size: 2rem;
+  }
+
+  .single-song__artist {
+    font-size: 1.5rem;
+  }
+}

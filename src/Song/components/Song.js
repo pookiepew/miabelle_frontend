@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Image from '../../shared/UIElements/Image';
 
 import './css/Song.css';
@@ -23,11 +25,13 @@ const Song = ({ song }) => {
 
   return (
     <div className='song'>
-      <Image
-        className='song__image'
-        src={'https://images.miabelle.tv/small/' + song.imageName}
-        alt={song.title}
-      />
+      <Link to={`/song/${song._id}`}>
+        <Image
+          className='song__image'
+          src={'https://images.miabelle.tv/small/' + song.imageName}
+          alt={song.title}
+        />
+      </Link>
       <h1 className='song__title'>{title}</h1>
       <p className='song__artist'>{artist}</p>
     </div>

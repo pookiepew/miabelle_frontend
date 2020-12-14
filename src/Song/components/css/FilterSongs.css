@@ -74,6 +74,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .filter-songs {
+    position: absolute;
+  }
   .filter-songs input {
     margin-bottom: 0;
     line-height: 0.5rem;
@@ -89,10 +92,6 @@
 
 @media screen and (width: 1024px) and (orientation: landscape) {
   .filter-songs {
-    position: absolute;
-    top: 80px;
-  }
-  .filter-songs {
     padding: 0 1rem;
   }
   .filter-songs input,
@@ -102,10 +101,6 @@
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
-  .filter-songs {
-    position: absolute;
-    top: 80px;
-  }
   .filter-songs {
     padding: 0 1rem;
   }
@@ -117,22 +112,7 @@
 
 @media screen and (max-width: 768px) {
   .filter-songs {
-    position: absolute;
-    top: 80px;
-  }
-  .filter-songs {
     padding: 0 1rem;
-  }
-  .filter-songs input,
-  .filter-songs select {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .filter-songs {
-    padding: 0 1rem;
-    top: 80px;
   }
   .filter-songs input,
   .filter-songs select {

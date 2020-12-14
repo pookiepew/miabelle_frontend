@@ -13,12 +13,9 @@ const Shedule = () => {
         <h2 className='card__title'>Schedule</h2>
       </div>
       <div className='card__body'>
-        <h2 className='card__body-text big-text'>
-          Fridays at 18:00 (6 PM) CET
-        </h2>
+        <h2 className='card__body-text big-text'>Fridays at 7 PM CET</h2>
         <p className='card__body-text'>
-          I'll let you know on insta-story and twitter if I'm late for a stream
-          and if I do bonus streams
+          I will let you know on discord if there is any changes on my schedule.
         </p>
       </div>
     </Card>

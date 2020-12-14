@@ -8,6 +8,7 @@ import songsFilter from '../../shared/functions/filterSongs';
 
 import Filter from '../components/FilterSongs';
 import Spinner from '../../shared/UIElements/Spinner';
+import ScrollArrow from '../../shared/UIElements/ScrollArrow';
 import ShowList from '../components/ShowList';
 
 import './css/SongList.css';
@@ -49,6 +50,7 @@ const SongList = ({ dispatch, songs }) => {
       ) : (
         <ShowList songs={songs.filtered} />
       )}
+      <ScrollArrow />
     </section>
   );
 };

@@ -1,29 +1,30 @@
 .song-list {
   width: 100%;
-  padding: 2rem 200px;
+  padding: 0 200px;
   padding-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-auto-rows: minmax(9rem, auto);
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1460px) {
   .song-list {
-    padding-top: 6rem;
+    padding-top: 3rem;
     grid-template-columns: repeat(4, 25%);
   }
 }
 
 @media screen and (max-width: 1300px) {
   .song-list {
-    padding: 3rem 60px;
+    padding: 0 60px;
     padding-bottom: 100px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .song-list {
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 3rem;
     grid-template-columns: repeat(3, 33%);
   }
@@ -38,7 +39,7 @@
 
 @media screen and (max-width: 768px) {
   .song-list {
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
     grid-template-columns: repeat(2, 50%);
   }
 }
