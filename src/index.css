@@ -14,6 +14,7 @@ body {
   background: var(--primary-color);
   font-family: 'Indie Flower', cursive;
   letter-spacing: 4px;
+  width: 100%;
 }
 
 main {

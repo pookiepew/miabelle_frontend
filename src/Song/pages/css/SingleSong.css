@@ -1,64 +1,94 @@
 .single-song__info {
-  width: 100%;
-  padding: 100px 200px;
+  width: 80%;
+  margin: auto;
   display: flex;
   color: #fff;
+  margin-top: 150px;
+  margin-bottom: 5rem;
+}
+
+.single-song__center {
+  margin-top: 12rem;
+}
+
+.single-song__lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .single-song__info img {
-  height: 400px;
+  min-width: 40%;
+  min-height: 512px;
   border-radius: 5px;
   border: 3px solid rgba(254, 120, 177, 1);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   margin-right: 50px;
 }
 
+.single-song__list-item {
+  margin-bottom: 5px;
+}
+
+.single-song__heading {
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
 .single-song__title {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .single-song__artist {
   font-size: 2rem;
 }
 
-.single-song__mode {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-}
-
-.single-song__routine {
-  font-size: 1.5rem;
-}
-
-.single-song__game {
-  font-size: 1.5rem;
-}
-
-.single-song__difficulty {
-  font-size: 1.5rem;
-}
-
-.single-song__effort {
-  font-size: 1.5rem;
+.single-song__info-text {
+  font-size: 2rem;
 }
 
 .single-song__video {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-bottom: 5rem;
 }
 
-@media only screen and (max-width: 1300px) {
-  .single-song__info {
-    padding: 100px 60px;
+.single-song__iframe {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  width: 40%;
+  height: 400px;
+}
+
+@media only screen and (max-width: 1900px) {
+  .single-song__center {
+    margin-top: 12rem;
+  }
+  .single-song__heading {
+    font-size: 1.6rem;
   }
   .single-song__title {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
   }
 
   .single-song__artist {
+    font-size: 1.6rem;
+  }
+  .single-song__info-text {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .single-song__iframe {
+    width: 70%;
+    height: 400px;
   }
 }

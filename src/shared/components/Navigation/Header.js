@@ -26,17 +26,19 @@ const Header = props => {
 
   return (
     <header className='main-header'>
-      {sidebarIsOpen && <Backdrop onClick={sidebarToggleHandler} />}
-      <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler}>
-        <NavLinks />
-      </Sidebar>
-      <h1 className='main-header__title'>
-        <Link to='/'>Miabelle.tv</Link>
-      </h1>
-      <nav className='main-nav'>
-        <NavLinks />
-      </nav>
-      <Hamburger classes={classes} click={sidebarToggleHandler} />
+      <div className='main-header__container'>
+        {sidebarIsOpen && <Backdrop onClick={sidebarToggleHandler} />}
+        <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler}>
+          <NavLinks />
+        </Sidebar>
+        <h1 className='main-header__title'>
+          <Link to='/'>Miabelle.tv</Link>
+        </h1>
+        <nav className='main-nav'>
+          <NavLinks />
+        </nav>
+        <Hamburger classes={classes} click={sidebarToggleHandler} />
+      </div>
     </header>
   );
 };
