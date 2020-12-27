@@ -11,6 +11,23 @@
   margin-top: 12rem;
 }
 
+.single-song__header {
+  display: none;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.single-song__header h1 {
+  margin-bottom: 1rem;
+}
+
+.single-song__header span {
+  text-decoration: underline;
+}
+
 .single-song__lists {
   display: flex;
   flex-direction: column;
@@ -19,8 +36,7 @@
 }
 
 .single-song__info img {
-  min-width: 40%;
-  min-height: 512px;
+  width: 512px;
   border-radius: 5px;
   border: 3px solid rgba(254, 120, 177, 1);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
@@ -36,6 +52,10 @@
   text-decoration: underline;
 }
 
+.single-song__info-heading {
+  text-decoration: underline;
+}
+
 .single-song__title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -46,7 +66,7 @@
 }
 
 .single-song__info-text {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .single-song__video {
@@ -62,8 +82,8 @@
   border: none;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-  width: 40%;
-  height: 400px;
+  width: 50%;
+  height: 450px;
 }
 
 @media only screen and (max-width: 1900px) {
@@ -90,5 +110,68 @@
   .single-song__iframe {
     width: 70%;
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .single-song__header {
+    display: flex;
+  }
+  .single-song__info {
+    margin-top: 2rem;
+  }
+  .single-song__lists {
+    justify-content: flex-end;
+  }
+  .single-song__title-artist {
+    display: none;
+  }
+  .single-song__info img {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .single-song__info,
+  .single-song__video,
+  .single-song__header {
+    width: 90%;
+  }
+  .single-song__info img {
+    width: 250px;
+  }
+  .single-song__header {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .single-song__info-text {
+    font-size: 1rem;
+  }
+  .single-song__iframe {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .single-song__info {
+    flex-direction: column;
+  }
+  .single-song__info img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .single-song__header span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .single-song__header h1 {
+    margin-bottom: 1rem;
+  }
+  .single-song__info-text {
+    font-size: 1.4rem;
+  }
+  .single-song__iframe {
+    width: 100%;
   }
 }

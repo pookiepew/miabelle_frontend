@@ -39,7 +39,11 @@ const SongList = ({ dispatch, songs }) => {
   return (
     <section className='songlist'>
       {!songs.loading && (
-        <Filter songs={songToFilter} filterHandler={filterHandler} />
+        <Filter
+          songs={songToFilter}
+          filterHandler={filterHandler}
+          filter={songs.filter}
+        />
       )}
 
       {songs.loading ? (
@@ -48,7 +52,7 @@ const SongList = ({ dispatch, songs }) => {
           <h2>Fetching Songs</h2>
         </div>
       ) : (
-        <ShowList songs={songs.filtered} />
+        <ShowList songs={songToFilter} />
       )}
       <ScrollArrow />
     </section>

@@ -31,8 +31,12 @@ const Filter = props => {
         type='text'
         placeholder='Search for Title or Artist'
         onChange={e => onChangeHandler(e, 'text')}
+        value={props.filter.text ? props.filter.text : ''}
       />
-      <select onChange={e => onChangeHandler(e, 'game')} defaultValue='default'>
+      <select
+        onChange={e => onChangeHandler(e, 'game')}
+        defaultValue={games.length === 1 ? games[0] : 'default'}
+      >
         <option value='default' disabled>
           -- Filter by game --
         </option>
@@ -43,7 +47,10 @@ const Filter = props => {
           </option>
         ))}
       </select>
-      <select onChange={e => onChangeHandler(e, 'mode')} defaultValue='default'>
+      <select
+        onChange={e => onChangeHandler(e, 'mode')}
+        defaultValue={modes.length === 1 ? modes[0] : 'default'}
+      >
         <option value='default' disabled>
           -- Filter by mode --
         </option>
@@ -56,7 +63,7 @@ const Filter = props => {
       </select>
       <select
         onChange={e => onChangeHandler(e, 'routine')}
-        defaultValue='default'
+        defaultValue={routines.length === 1 ? routines[0] : 'default'}
       >
         <option value='default' disabled>
           -- Filter by routines --
@@ -73,6 +80,7 @@ const Filter = props => {
         type='text'
         placeholder='Search for Title or Artist'
         onChange={e => onChangeHandler(e, 'text')}
+        value={props.filter.text ? props.filter.text : ''}
       />
     </form>
   );

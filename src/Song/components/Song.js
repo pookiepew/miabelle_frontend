@@ -5,8 +5,6 @@ import Image from '../../shared/UIElements/Image';
 import './css/Song.css';
 
 const Song = ({ song }) => {
-  console.log('[Song] render');
-
   let title = song.title;
   let artist = song.artist;
 

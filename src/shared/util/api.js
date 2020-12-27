@@ -5,7 +5,7 @@ import store from '../redux/store';
 import { LOGOUT } from '../redux/actions/types';
 
 const api = axios.create({
-  baseURL: 'http://localhost:4040/api/v1',
+  baseURL: 'https://api.miabelle.tv/v1',
   headers: {
     'Content-Type': 'application/json'
   }
