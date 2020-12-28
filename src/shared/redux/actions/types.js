@@ -5,6 +5,7 @@ export const USER_LOADED = 'USER_LOADED';
 
 // SONGS
 export const GET_ALL_SONGS = 'GET_ALL_SONGS';
+export const GET_SINGLE_SONG = 'GET_SINGLE_SONG';
 export const FILTER_SONGS = 'FILTER_SONGS';
 export const REQUEST_SONG = 'REQUEST_SONG';
 export const ACTIVATE_SONG = 'ACTIVATE_SONG';
