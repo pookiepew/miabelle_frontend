@@ -7,8 +7,6 @@ import SingleSong from './Song/pages/SingleSong';
 import Footer from './shared/components/Footer';
 
 const App = () => {
-  console.log('[APP] render');
-
   let routes;
 
   routes = (

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './css/NavLinks.css';
 
 const NavLinks = () => {
-  console.log('[NavLinks] render');
   return (
     <ul className='navlinks'>
       <li className='navlinks__link'>

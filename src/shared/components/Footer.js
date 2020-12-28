@@ -5,7 +5,11 @@ const Footer = () => {
     <footer>
       <p>
         Website by{' '}
-        <a href='http://' target='_blank' rel='noopener noreferrer'>
+        <a
+          href='https://www.twitch.tv/pookiepew'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           pookiepew
         </a>
       </p>

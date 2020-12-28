@@ -10,8 +10,6 @@ import Hamburger from '../../UIElements/Hamburger';
 import './css/Header.css';
 
 const Header = props => {
-  console.log('[Header] render');
-
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [classes, setClasses] = useState('hamburger hamburger--spin');
 

@@ -30,13 +30,6 @@
   }
 }
 
-/* @media screen and (max-width: 900px) and (orientation: landscape) {
-  .song-list {
-    padding: 6rem 1rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-
 @media screen and (max-width: 768px) {
   .song-list {
     padding: 4rem 1rem;

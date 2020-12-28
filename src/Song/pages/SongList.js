@@ -14,10 +14,7 @@ import ShowList from '../components/ShowList';
 import './css/SongList.css';
 
 const SongList = ({ dispatch, songs }) => {
-  console.log('[SongList] render');
-
   useEffect(() => {
-    console.log('[SongList] getting songs');
     dispatch(getAllSongs());
   }, [dispatch]);
 

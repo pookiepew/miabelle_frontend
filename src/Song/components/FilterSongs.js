@@ -3,8 +3,6 @@ import checkInputValue from '../../shared/functions/checkInputVal';
 import './css/FilterSongs.css';
 
 const Filter = props => {
-  console.log('[FilterSongs] render');
-
   const games = [];
   const modes = [];
   const routines = [];

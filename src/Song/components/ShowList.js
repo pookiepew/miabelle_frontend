@@ -7,8 +7,6 @@ import Song from './Song';
 import './css/ShowList.css';
 
 const ShowList = ({ songs }) => {
-  console.log('[ShowList] render');
-
   let moreSongsToLoad = true;
 
   const [filteredSongs, setFilteredSongs] = useState([]);
