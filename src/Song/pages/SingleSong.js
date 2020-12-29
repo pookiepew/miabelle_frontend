@@ -14,7 +14,7 @@ const SingleSong = ({ dispatch, songs }) => {
 
   useEffect(() => {
     dispatch(getSingleSong(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   const song = songs.single;
 
@@ -42,10 +42,12 @@ const SingleSong = ({ dispatch, songs }) => {
                 : 'single-song__center single-song__info'
             }
           >
-            <Image
-              src={'https://images.miabelle.tv/large/' + song.imageName}
-              alt={song.imageName}
-            />
+            {song.imageName && (
+              <Image
+                src={'https://images.miabelle.tv/large/' + song.imageName}
+                alt={song.imageName}
+              />
+            )}
             <div className='single-song__lists'>
               <ul className='single-song__title-artist'>
                 <li className='single-song__list-item'>

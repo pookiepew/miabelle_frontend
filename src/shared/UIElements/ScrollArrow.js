@@ -27,6 +27,7 @@ const ScrollArrow = () => {
     <img
       className='scrollTop'
       alt='Upwards arrow'
+      title='Scroll to top'
       src={upArrow}
       onClick={scrollTop}
       style={{ display: showScroll ? 'flex' : 'none' }}
