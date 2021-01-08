@@ -25,7 +25,7 @@ const Filter = props => {
   return (
     <form className='filter-songs'>
       <input
-        className='text-search2'
+        className='text-search'
         type='text'
         placeholder='Search for Title or Artist'
         onChange={e => onChangeHandler(e, 'text')}
@@ -73,13 +73,6 @@ const Filter = props => {
           </option>
         ))}
       </select>
-      <input
-        className='text-search'
-        type='text'
-        placeholder='Search for Title or Artist'
-        onChange={e => onChangeHandler(e, 'text')}
-        value={props.filter.text ? props.filter.text : ''}
-      />
     </form>
   );
 };

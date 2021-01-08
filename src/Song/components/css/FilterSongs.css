@@ -40,23 +40,15 @@
   cursor: pointer;
 }
 
-.text-search2 {
-  display: none;
-}
-
 @media screen and (max-width: 1460px) {
   .filter-songs {
     flex-wrap: wrap;
-  }
-  .text-search {
-    display: none;
   }
   .filter-songs input {
     border-top: 3px solid rgba(254, 120, 177, 0.4);
     border-bottom: 3px solid rgba(254, 120, 177, 0.4);
   }
-  .text-search2 {
-    display: block;
+  .text-search {
     width: 100%;
     margin-bottom: 1rem;
   }

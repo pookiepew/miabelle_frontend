@@ -16,7 +16,9 @@ const ShowList = ({ songs }) => {
   };
 
   useEffect(() => {
-    if (songs.length > 0) setFilteredSongs(songs.slice(0, 20));
+    if (songs.length > 0) {
+      setFilteredSongs(songs.slice(0, 20));
+    }
     if (songs.length === 0) setFilteredSongs([]);
   }, [songs]);
 
