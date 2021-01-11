@@ -13,3 +13,9 @@ Form to filter songs:
     - Mode: Select
     - Routine: Select
     - Artist or title: Input
+
+
+Twitch - Things to consider:
+  - If user logs in, then closes the browser - Need a func to check JWT against backend on next visit
+  - Auth should be checked often
+  - Token refresh logic - when, how?
