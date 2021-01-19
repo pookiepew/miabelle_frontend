@@ -13,7 +13,7 @@ const Shedule = () => {
         <h2 className='card__title'>Schedule</h2>
       </div>
       <div className='card__body'>
-        <h2 className='card__body-text big-text'>Fridays at 7 PM CET</h2>
+        <h2 className='card__body-text big-text'>Fridays at 8 PM CET</h2>
         <p className='card__body-text'>
           I will let you know on discord if there is any changes on my schedule.
         </p>
