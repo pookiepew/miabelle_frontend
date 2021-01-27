@@ -18,7 +18,7 @@ const Song = ({ song }) => {
   }
   if (artist.length > 15) {
     const artistSplit = artist.split(' ', 2);
-    artist = artistSplit[0] + artistSplit[1] + '...';
+    artist = artistSplit[0] + ' ' + artistSplit[1] + '...';
   }
 
   return (

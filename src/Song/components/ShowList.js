@@ -25,21 +25,27 @@ const ShowList = ({ songs }) => {
   if (songs.length === filteredSongs.length) moreSongsToLoad = false;
 
   return (
-    <InfiniteScroll
-      dataLength={filteredSongs.length}
-      next={() => loadMoreSongs(20)}
-      hasMore={moreSongsToLoad}
-      loader={<h4>Loading...</h4>}
-      hasChildren={true}
-    >
-      <ul className='song-list'>
-        {filteredSongs.map(song => (
-          <li className='song-list__item' key={song._id}>
-            <Song song={song} />
-          </li>
-        ))}
-      </ul>
-    </InfiniteScroll>
+    <>
+      {songs.length > 0 ? (
+        <InfiniteScroll
+          dataLength={filteredSongs.length}
+          next={() => loadMoreSongs(20)}
+          hasMore={moreSongsToLoad}
+          loader={<h4>Loading...</h4>}
+          hasChildren={true}
+        >
+          <ul className='song-list'>
+            {filteredSongs.map(song => (
+              <li className='song-list__item' key={song._id}>
+                <Song song={song} />
+              </li>
+            ))}
+          </ul>
+        </InfiniteScroll>
+      ) : (
+        <h2 className='error'>Sorry, no songs found</h2>
+      )}
+    </>
   );
 };
 

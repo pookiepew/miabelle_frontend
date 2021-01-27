@@ -67,6 +67,7 @@ const songsFilter = (songs, filterFromComponent) => {
   }
   if (newFilter.text) {
     filteredSongs = findTextMatches(filteredSongs, newFilter.text);
+    console.log(filteredSongs);
   }
 
   if (

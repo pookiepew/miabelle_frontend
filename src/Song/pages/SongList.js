@@ -18,13 +18,19 @@ const SongList = ({ dispatch, songs }) => {
     dispatch(getAllSongs());
   }, [dispatch]);
 
-  let songToFilter;
+  let songsToFilter;
+  let songsToRender = [];
 
   if (!songs.loading) {
     if (songs.filtered.length === 0) {
-      songToFilter = songs.all;
+      songsToFilter = songs.all;
+      songsToRender = songs.all;
+      if (songs.filter.text || songs.filter.mode || songs.filter.routine) {
+        songsToRender = [];
+      }
     } else {
-      songToFilter = songs.filtered;
+      songsToFilter = songs.filtered;
+      songsToRender = songs.filtered;
     }
   }
 
@@ -37,7 +43,7 @@ const SongList = ({ dispatch, songs }) => {
     <section className='songlist'>
       {!songs.loading && (
         <Filter
-          songs={songToFilter}
+          songs={songsToFilter}
           filterHandler={filterHandler}
           filter={songs.filter}
         />
@@ -49,7 +55,7 @@ const SongList = ({ dispatch, songs }) => {
           <h2>Fetching Songs</h2>
         </div>
       ) : (
-        <ShowList songs={songToFilter} />
+        <ShowList songs={songsToRender} />
       )}
       <ScrollArrow />
     </section>

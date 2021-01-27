@@ -8,6 +8,16 @@
   margin-bottom: 100px;
 }
 
+.error {
+  position: fixed;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  font-family: 'Indie Flower', cursive;
+  color: #fff;
+  font-size: 3rem;
+}
+
 @media screen and (max-width: 1460px) {
   .song-list {
     padding-top: 3rem;
@@ -34,5 +44,8 @@
   .song-list {
     padding: 4rem 1rem;
     grid-template-columns: repeat(2, 50%);
+  }
+  .error {
+    font-size: 1.5rem;
   }
 }

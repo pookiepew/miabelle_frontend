@@ -21,7 +21,7 @@
   width: 80%;
   margin: auto;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .single-song__header h1 {
@@ -61,16 +61,16 @@
 }
 
 .single-song__title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .single-song__artist {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .single-song__info-text {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .single-song__video {
@@ -88,26 +88,6 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   width: 50%;
   height: 450px;
-}
-
-@media only screen and (max-width: 1900px) {
-  .single-song__center {
-    margin-top: 12rem;
-  }
-  .single-song__heading {
-    font-size: 1.6rem;
-  }
-  .single-song__title {
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .single-song__artist {
-    font-size: 1.6rem;
-  }
-  .single-song__info-text {
-    font-size: 1.5rem;
-  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -166,11 +146,11 @@
   }
   .single-song__header span {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   .single-song__header h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .single-song__info-text {
     font-size: 1.4rem;

@@ -12,7 +12,7 @@
 
 body {
   background: var(--primary-color);
-  font-family: 'Indie Flower', cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 4px;
   width: 100%;
 }
