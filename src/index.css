@@ -36,3 +36,17 @@ ul {
 .infinite-scroll-component__outerdiv {
   padding-top: 100px;
 }
+
+.indie {
+  font-family: 'Indie Flower', cursive;
+  color: #fff;
+}
+.overlay {
+  z-index: 999999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+}
