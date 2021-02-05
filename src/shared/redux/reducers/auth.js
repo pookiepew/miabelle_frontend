@@ -1,10 +1,13 @@
 import { LOGIN_SUCCESS, USER_LOADED, LOGOUT } from '../actions/types';
 
 const initialState = {
-  token: localStorage.getItem('token'),
-  isAuthenticated: false,
-  loading: true,
-  user: null
+  user: {
+    isAuthenticated: false,
+    chat: {
+      connected: false
+    }
+  },
+  loading: true
 };
 
 const auth = (state = initialState, action) => {
@@ -14,24 +17,34 @@ const auth = (state = initialState, action) => {
     case LOGIN_SUCCESS:
       return {
         ...state,
-        ...payload,
-        isAuthenticated: true,
+        user: {
+          ...state.user,
+          ...payload,
+          isAuthenticated: true
+        },
         loading: false
       };
     case USER_LOADED:
       return {
         ...state,
-        isAuthenticated: true,
-        loading: false,
-        user: payload
+        user: {
+          ...state.user,
+          ...payload,
+          isAuthenticated: true
+        },
+        loading: false
       };
     case LOGOUT:
       return {
         ...state,
-        token: null,
-        isAuthenticated: false,
-        loading: false,
-        user: null
+        user: {
+          ...state.user,
+          isAuthenticated: false,
+          chat: {
+            connected: false
+          }
+        },
+        loading: false
       };
     default:
       return state;
