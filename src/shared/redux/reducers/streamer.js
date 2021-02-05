@@ -1,7 +1,7 @@
 import { GET_STREAMER_DATA } from '../actions/types';
 
 const initialState = {
-  streamer: 'xxmiabellexx',
+  login: 'xxmiabellexx',
   songs: [],
   favoriteSongs: [],
   learningSongs: [],
