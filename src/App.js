@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Authenticate from './shared/components/Authenticate';
+import Account from './Account/pages/Account';
 import Header from './shared/components/Navigation/Header';
 import Home from './Home/Home';
 import SongList from './Song/pages/SongList';
@@ -16,22 +17,26 @@ import { chat } from './shared/util/chat';
 
 import { loadUser } from './shared/redux/actions/auth';
 
+import { websocket } from './shared/util/websockets';
+
 const twitchClientId = process.env.REACT_APP_TWITCH_CLIENT_ID;
 const twitchRedirURI = process.env.REACT_APP_TWITCH_REDIR_URI;
 const twitchScopes = process.env.REACT_APP_TWITCH_SCOPES;
+const twitchStreamerScopes = process.env.REACT_APP_BASE_TWITCH_STREAMER_SCOPES;
 
 // console.log(twitchClientId);
 // console.log(twitchRedirURI);
 // console.log(twitchScopes);
 
 const userURL = `https://id.twitch.tv/oauth2/authorize?client_id=${twitchClientId}&redirect_uri=${twitchRedirURI}&response_type=code&scope=${twitchScopes}&state=kj4h5kjh65kjh7lk456g3gyf55v5hj34`;
-const streamerURL = `https://id.twitch.tv/oauth2/authorize?client_id=${twitchClientId}&redirect_uri=${twitchRedirURI}&response_type=code&scope=${twitchScopes}&state=kj4h5kjh65kjh7lk456g3gyf55v5hj34`;
+const streamerURL = `https://id.twitch.tv/oauth2/authorize?client_id=${twitchClientId}&redirect_uri=${twitchRedirURI}&response_type=code&scope=${twitchStreamerScopes}&state=kj4h5kjh65kjh7lk456g3gyf55v5hj34`;
 
 const App = ({ user, loadUser, streamer }) => {
   let routes = null;
   let parsedUser = null;
 
   console.log('APP render...');
+  if (!websocket.connected) websocket.connect();
 
   const storedUser = localStorage.getItem('user');
 
@@ -56,7 +61,7 @@ const App = ({ user, loadUser, streamer }) => {
 
   useEffect(() => {
     let timeout;
-    if (user.isAuthenticated) {
+    if (user.isAuthenticated && !chat.connected) {
       timeout = setTimeout(() => {
         chat.connect(user.login, user.access_token, streamer.login);
       }, 5000);
@@ -78,6 +83,7 @@ const App = ({ user, loadUser, streamer }) => {
         <SingleSong />
       </Route>
       <Route exact path='/authenticate' component={Authenticate} />
+      <Route exact path='/account' component={Account} />
       <Route
         exact
         path='/login'
@@ -103,7 +109,7 @@ const App = ({ user, loadUser, streamer }) => {
 
   return (
     <Router>
-      <Header />
+      <Header user={user} />
       <main>{routes}</main>
       <Footer />
     </Router>
