@@ -9,7 +9,7 @@ import Hamburger from '../../UIElements/Hamburger';
 
 import './css/Header.css';
 
-const Header = props => {
+const Header = ({ user }) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [classes, setClasses] = useState('hamburger hamburger--spin');
 
@@ -27,13 +27,13 @@ const Header = props => {
       <div className='main-header__container'>
         {sidebarIsOpen && <Backdrop onClick={sidebarToggleHandler} />}
         <Sidebar show={sidebarIsOpen} onClick={sidebarToggleHandler}>
-          <NavLinks />
+          <NavLinks user={user} />
         </Sidebar>
         <h1 className='main-header__title'>
           <Link to='/'>Miabelle.tv</Link>
         </h1>
         <nav className='main-nav'>
-          <NavLinks />
+          <NavLinks user={user} />
         </nav>
         <Hamburger classes={classes} click={sidebarToggleHandler} />
       </div>
