@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
 
+import { useLocation, Redirect } from 'react-router-dom';
+
 import Spinner from '../UIElements/Spinner';
 
 import { connect } from 'react-redux';
-
-import { useLocation, Redirect } from 'react-router-dom';
 
 import { login } from '../redux/actions/auth';
 
 import './css/Authenticate.css';
 
-const Authenticate = ({ login, auth: { isAuthenticated, loading, user } }) => {
+const Authenticate = ({ login, user, loading }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -24,7 +24,6 @@ const Authenticate = ({ login, auth: { isAuthenticated, loading, user } }) => {
 
     if (location.search) {
       const code = location.search.split('?code=')[1].split('&scope=')[0];
-      console.log(code);
       login(code);
     }
 
@@ -39,8 +38,11 @@ const Authenticate = ({ login, auth: { isAuthenticated, loading, user } }) => {
 
   if (loading || !user) {
     output = <Spinner />;
-  } else if (isAuthenticated && user) {
-    output = <Redirect to={{ pathname: '/account' }} />;
+  } else if (user && user.isAuthenticated) {
+    output = <Redirect to='/account' />;
+  }
+  if (!location.search) {
+    output = <Redirect to='/login' />;
   }
   return (
     <div className={'main__container'}>
@@ -51,7 +53,8 @@ const Authenticate = ({ login, auth: { isAuthenticated, loading, user } }) => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  user: state.auth.user,
+  loading: state.auth.loading
 });
 
 export default connect(mapStateToProps, { login })(Authenticate);
