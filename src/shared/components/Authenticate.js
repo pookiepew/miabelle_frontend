@@ -10,7 +10,7 @@ import { login } from '../redux/actions/auth';
 
 import './css/Authenticate.css';
 
-const Authenticate = ({ login, user, loading }) => {
+const Authenticate = ({ login, user, loading, streamer }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Authenticate = ({ login, user, loading }) => {
 
     if (location.search) {
       const code = location.search.split('?code=')[1].split('&scope=')[0];
-      login(code);
+      login(code, streamer.login);
     }
 
     window.history.replaceState(
@@ -32,7 +32,7 @@ const Authenticate = ({ login, user, loading }) => {
       '',
       window.location.origin + '/authenticate'
     );
-  }, [location.search, login]);
+  }, [location.search, login, streamer.login]);
 
   let output;
 
@@ -54,7 +54,8 @@ const Authenticate = ({ login, user, loading }) => {
 
 const mapStateToProps = state => ({
   user: state.auth.user,
-  loading: state.auth.loading
+  loading: state.auth.loading,
+  streamer: state.streamer
 });
 
 export default connect(mapStateToProps, { login })(Authenticate);

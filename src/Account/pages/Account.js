@@ -21,7 +21,7 @@ const Account = ({ user, twitchChat, streamer }) => {
           <Spinner />
         </div>
       )}
-      {!user.loading && user.login === streamer.login ? (
+      {!user.loading && user.login !== streamer.login ? (
         <Users user={user} twitchChat={twitchChat} streamer={streamer} />
       ) : (
         <Streamer user={user} />

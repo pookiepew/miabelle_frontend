@@ -4,7 +4,7 @@ import { LOGIN_SUCCESS, USER_LOADED } from './types';
 
 const URL = process.env.REACT_APP_DEV_URL;
 
-export const login = code => async dispatch => {
+export const login = (code, streamer) => async dispatch => {
   try {
     const {
       data: {
@@ -15,7 +15,9 @@ export const login = code => async dispatch => {
         refresh_token,
         access_token
       }
-    } = await axios.get(URL + '/twitch-auth/authenticate?code=' + code);
+    } = await axios.get(
+      URL + '/twitch-auth/authenticate?code=' + code + '&streamer=' + streamer
+    );
 
     const user = JSON.stringify({
       refresh_token,
