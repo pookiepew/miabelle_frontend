@@ -1,0 +1,38 @@
+.account h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.account h1 img {
+  width: 50px;
+}
+
+.account__spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 100;
+}
+
+.account p {
+  margin-top: 4rem;
+  letter-spacing: normal;
+  font-size: 1.2rem;
+}
+
+.account__emote {
+  height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .account h1 {
+    font-size: 1.9rem;
+  }
+}

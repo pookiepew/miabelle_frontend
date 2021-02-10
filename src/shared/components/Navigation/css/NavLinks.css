@@ -1,15 +1,35 @@
 .navlinks {
   display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .navlinks__link a {
+  display: block;
   font-size: 2.2rem;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-family: 'Indie Flower', cursive;
+  height: 100%;
 }
 
 .navlinks__link a:hover {
   cursor: pointer;
   text-decoration: underline 2px;
+}
+
+.navlinks__account-image {
+  display: block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 3px solid transparent;
+  transition: border-radius 500ms, border 500ms;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navlinks__account-image:hover {
+  border-radius: 5%;
+  cursor: pointer;
+  border: 3px solid #fe78b1;
 }

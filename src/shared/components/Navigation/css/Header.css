@@ -10,6 +10,7 @@
 
 .main-header__container {
   width: 80%;
+  height: 100px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -25,6 +26,10 @@
 .main-header__title a {
   font-family: 'Indie Flower', cursive;
   color: #fff;
+}
+
+.main-nav {
+  height: 100%;
 }
 
 @media (max-width: 1300px) {

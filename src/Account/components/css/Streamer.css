@@ -1,0 +1,14 @@
+.streamer__controls {
+  width: 100%;
+}
+
+.streamer__controls li {
+  padding: 0.7rem 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.streamer__controls li:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
