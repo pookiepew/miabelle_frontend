@@ -33,3 +33,9 @@
   cursor: pointer;
   border: 3px solid #fe78b1;
 }
+
+@media screen and (max-width: 1024px) {
+  .navlinks {
+    flex-direction: column;
+  }
+}
