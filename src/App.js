@@ -52,12 +52,13 @@ const App = ({ user, loadUser, streamer }) => {
           console.log('LOADING USER');
           loadUser({
             twitch_id: parsedUser.twitch_id,
-            refresh_token: parsedUser.refresh_token
+            refresh_token: parsedUser.refresh_token,
+            streamer: streamer.login
           });
         }
       }
     }
-  }, [user.isAuthenticated, loadUser, parsedUser]);
+  }, [user.isAuthenticated, loadUser, parsedUser, streamer.login]);
 
   useEffect(() => {
     let timeout;

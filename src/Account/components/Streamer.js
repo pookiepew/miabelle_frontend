@@ -11,6 +11,7 @@ import './css/Streamer.css';
 const Streamer = ({ user }) => {
   const [showSonglistMods, setShowSonglistMods] = useState(false);
   const [showChatMods, setShowChatMods] = useState(false);
+  const [showTwitchChat, setShowTwitchChat] = useState(false);
 
   return (
     <>
@@ -23,6 +24,7 @@ const Streamer = ({ user }) => {
           onClick={() => {
             setShowSonglistMods(true);
             setShowChatMods(false);
+            setShowTwitchChat(false);
           }}
         >
           Songlist mods
@@ -30,8 +32,19 @@ const Streamer = ({ user }) => {
         <li
           className='shadow'
           onClick={() => {
+            setShowTwitchChat(true);
             setShowSonglistMods(false);
+            setShowChatMods(false);
+          }}
+        >
+          Twitch Chat
+        </li>
+        <li
+          className='shadow'
+          onClick={() => {
             setShowChatMods(true);
+            setShowSonglistMods(false);
+            setShowTwitchChat(false);
           }}
         >
           Twitch chat mods
@@ -39,6 +52,7 @@ const Streamer = ({ user }) => {
       </ul>
       <div>
         <SonglistMods show={showSonglistMods} />
+        <SonglistMods show={showTwitchChat} />
         <TwitchChatMods show={showChatMods} />
       </div>
     </>

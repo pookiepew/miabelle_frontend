@@ -37,6 +37,12 @@ export const chat = {
       const { twitchChat } = store.getState();
       if (twitchChat.connectionStatus !== 'Connected')
         store.dispatch(setConnectionStatus('Connected'));
+      if (message === '!dance') {
+        client.say(
+          channel,
+          'catJAM catJAM catJAM catJAM catJAM catJAM catJAM catJAM'
+        );
+      }
     });
     try {
       await client.connect();
