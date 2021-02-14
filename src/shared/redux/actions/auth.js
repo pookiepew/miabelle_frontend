@@ -45,7 +45,7 @@ export const login = (code, streamer) => async dispatch => {
 };
 
 export const loadUser = data => async dispatch => {
-  const { twitch_id, refresh_token } = data;
+  const { twitch_id, refresh_token, streamer } = data;
   try {
     const { data } = await axios.get(
       URL +
@@ -53,7 +53,9 @@ export const loadUser = data => async dispatch => {
         '?twitch_id=' +
         twitch_id +
         '&refresh_token=' +
-        refresh_token
+        refresh_token +
+        '&streamer=' +
+        streamer
     );
 
     const user = JSON.stringify({

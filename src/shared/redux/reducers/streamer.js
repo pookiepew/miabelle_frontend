@@ -1,4 +1,4 @@
-import { GET_STREAMER_DATA } from '../actions/types';
+import { GET_STREAMER_DATA, GET_USERS_BY_STREAMER } from '../actions/types';
 
 const initialState = {
   login: 'pookiepew',
@@ -14,6 +14,10 @@ const initialState = {
     leaveQueueMessage: '',
     openQueueMessage: '',
     closeQueueMessage: ''
+  },
+  users: {
+    all: [],
+    approved: []
   },
   loading: true
 };
@@ -34,6 +38,14 @@ const streamer = (state = initialState, action) => {
         twitchChat: payload.twitchChat,
         streamer,
         loading: false
+      };
+    case GET_USERS_BY_STREAMER:
+      return {
+        ...state,
+        users: {
+          ...state.users,
+          all: payload
+        }
       };
 
     default:
